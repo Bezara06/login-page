@@ -9,27 +9,58 @@
 </head>
 
 <body>
-    <div class="container">
-        <h1>Connexion</h1>
-        <div class="icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <path
-                    d="M12 3 A 4 4 0 0 0 8 7 A 4 4 0 0 0 12 11 A 4 4 0 0 0 16 7 A 4 4 0 0 0 12 3 z M 8.8105469 14.392578C5.9935469 15.016578 3 16.385 3 18.5L3 21L21 21L21 18.5C21 16.385 18.006453 15.016578 15.189453 14.392578C14.459453 15.363578 13.308 16 12 16C10.692 16 9.5405469 15.363578 8.8105469 14.392578 z" />
-            </svg>
-        </div>
-        <form action="#" method="get">
-            <input type="email" name="mail" id="mail" placeholder="Votre e-mail">
-            <input type="password" name="password" id="pss" placeholder="Votre mot de passe">
-            <input type="submit" value="Se connecter" id="valid">
-        </form>
-        <div class="term">
-            <div class="rem">
-                <input type="checkbox" name="remembre" id="remembre">
-                <label for="remembre">Accepter</label>
+    <section class="main">
+        <!-- container for logIn form-->
+        <div class="container-l">
+            <!-- title -->
+            <h1>Connexion</h1>
+            <div class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path
+                        d="M12 3 A 4 4 0 0 0 8 7 A 4 4 0 0 0 12 11 A 4 4 0 0 0 16 7 A 4 4 0 0 0 12 3 z M 8.8105469 14.392578C5.9935469 15.016578 3 16.385 3 18.5L3 21L21 21L21 18.5C21 16.385 18.006453 15.016578 15.189453 14.392578C14.459453 15.363578 13.308 16 12 16C10.692 16 9.5405469 15.363578 8.8105469 14.392578 z" />
+                </svg>
             </div>
-            <a href="#">Mot de passe oublier ?</a>
+            <!-- form logIn-->
+            <form action="#" method="get">
+                <input type="email" name="mail" id="mail" placeholder="Votre e-mail">
+                <input type="password" name="password" id="pss" placeholder="Votre mot de passe">
+                <input type="submit" value="Se connecter" id="valid">
+            </form>
+            <div class="term">
+                <div class="rem">
+                    <input type="checkbox" name="remembre" id="remembre">
+                    <label for="remembre">Accepter</label>
+                </div>
+                <a href="#" id="clic-to-register">Mot de passe oublier ?</a>
+            </div>
         </div>
-    </div>
+        <!-- container for register form-->
+        <div class="container-r show">
+            <!-- title register-->
+            <h1>Creation compte</h1>
+            <div class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path
+                        d="M12 3 A 4 4 0 0 0 8 7 A 4 4 0 0 0 12 11 A 4 4 0 0 0 16 7 A 4 4 0 0 0 12 3 z M 8.8105469 14.392578C5.9935469 15.016578 3 16.385 3 18.5L3 21L21 21L21 18.5C21 16.385 18.006453 15.016578 15.189453 14.392578C14.459453 15.363578 13.308 16 12 16C10.692 16 9.5405469 15.363578 8.8105469 14.392578 z" />
+                </svg>
+            </div>
+            <!-- form -->
+            <form action="#" method="get">
+                <input type="email" name="mail" id="mail" placeholder="Votre e-mail">
+                <input type="password" name="password" id="pss" placeholder="Votre mot de passe">
+                <input type="password" name="password" id="pss" placeholder="Confirmer votre mot de passe">
+                <input type="submit" value="S'inscrire" id="valid">
+            </form>
+            <div class="term">
+                <div class="rem">
+                    <input type="checkbox" name="remembre" id="remembre">
+                    <label for="remembre">Accepter</label>
+                </div>
+                <a href="#" id="clic-to-login">Vous avez de compte ?</a>
+            </div>
+        </div>
+    </section>
+    <script src="script/script.js"></script>
 </body>
 
 </html>

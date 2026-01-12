@@ -1,67 +1,154 @@
+/* will be apply for all files in this directory and its subdirectories. */
 * {
     padding: 0;
+    /*remove default padding*/
     margin: 0;
+    /*remove default margin*/
+    box-sizing: border-box;
+    /*include padding and border in element's total width and height*/
     font-family: serif;
+    /*set default font family*/
 }
 
+/* body styles */
 body {
     font-size: 14px;
+    /*base font size*/
+    background-color: #E5E5E5;
+    /*light gray background*/
+    overflow-x: hidden;
+    /*prevent horizontal scroll*/
 }
 
-.container {
+/* main section containing both forms */
+main {
+    width: 100%;
+    /*full width*/
+    height: 100vh;
+    /*full viewport height*/
+    display: flex;
+    /*flexbox model*/
+    flex-direction: row;
+    /* justify-content: center; */
+    /*center horizontally*/
+    /* align-items: center; */
+    /*center vertically*/
+}
+
+/* container for form and its elements */
+.container-l, .container-r {
+    display: none;
     width: 50%;
+    /*container width*/
     margin: 3px auto;
+    /*center the container*/
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+    /*white background*/
     padding: 12px;
+    /*space inside the container*/
     border: 1px solid #0F2A3D;
     border-radius: 15px;
+    /*rounded corners*/
     transform: translateY(30%);
+    /*move down 30% of its height*/
+}
+
+.container-l.show, .container-r.show {
+    display: block;
+    /*show the container*/
 }
 
 form {
     position: relative;
+    /*to position its elements*/
     width: 100%;
+    /*full width*/
     display: flex;
+    /*flexbox model*/
     flex-direction: column;
+    /*stack elements vertically*/
 }
 
 h1 {
     text-align: center;
+    /*center the title*/
     color: #0F2A3D;
+    /*title color*/
+    font-size: calc(2vw + 10px);
+    /*responsive font size*/
+    text-transform: uppercase;
+    /*uppercase letters*/
+    margin-bottom: calc(1vw + 7px);
+    /*space below title*/
 }
 
 .icon {
     width: 100%;
+    /*full width*/
     text-align: center;
+    /*center the icon*/
+    margin-bottom: calc(1vw + 7px);
+    /*space below icon*/
 }
 
 svg {
     width: 94px;
+    /*icon width*/
     height: auto;
+    /*keep aspect ratio*/
     fill: #0F2A3D;
+    /*icon color*/
 }
 
 #mail, #pss, #valid {
     height: 30px;
+    /*input field height*/
     padding: 3px 7px;
+    /*space inside input fields*/
+    font-size: medium;
+    /*make text larger*/
     margin-top: calc(1vw + 3px);
+    /*space above elements*/
     margin-bottom: calc(1vw + 7px);
+    /*space between elements*/
     border-radius: 7px;
-        border: 1px solid #0F2A3D;
+    /*rounded corners*/
+    border: 1px solid #0F2A3D;
+    /*border color*/
 }
 
 #valid {
     background-color: #0F2A3D;
     color: #ffffff;
     font-size: large;
+    /*make button text larger*/
+    cursor: pointer;
+    /*pointer cursor on hover*/
 }
 
-.term{
+.term {
     display: flex;
+    /*flexbox model*/
     justify-content: space-between;
+    /*space between checkbox and link*/
+    align-items: center;
+    /*align vertically*/
 }
 
-@media (max-width: 1000px){
-    .container{
+@media (max-width: 1000px) {
+
+    /*for screens smaller than 1000px wide*/
+    .container-l, .container-r {
         width: 80%;
+        /*make container wider*/
+    }
+
+    /*show the container*/
+    .container-r.show, .container-l.show {
+        display: block;
+        /*show the container*/
+        width: 80%;
+        /*make container wider*/
     }
 }
