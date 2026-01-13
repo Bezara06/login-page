@@ -136,6 +136,25 @@ svg {
     /*align vertically*/
 }
 
+footer {
+    width: 100%;
+    /*full width*/
+    text-align: center;
+    /*center the text*/
+    padding: 10px 0;
+    /*space above and below*/
+    background-color: #0F2A3D;
+    /*dark background*/
+    color: #ffffff;
+    /*white text*/
+    position: fixed;
+    /*fixed position*/
+    bottom: 0;
+    /*stick to bottom*/
+    left: 0;
+    /*align to left*/
+}
+
 @media (max-width: 1000px) {
 
     /*for screens smaller than 1000px wide*/

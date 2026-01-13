@@ -16,3 +16,7 @@ clicToLogin.onclick = function () {
     container_l.classList.add("show");
     title.innerText = "Login";
 }
+
+let yearsSpan = document.getElementById("years");
+let currentYear = new Date().getFullYear();
+yearsSpan.textContent = currentYear;
